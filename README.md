@@ -19,7 +19,7 @@
 
 ## 📂 GitHub Repository
 
-**https://github.com/anmol-janmejay/AI-Powered-Business-Report-Generator**
+[![Watch Demo](Github.jpg)](https://youtu.be/oCX3OemNhi4)
 
 ---
 
