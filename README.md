@@ -1,334 +1,408 @@
-# AI Business Report Generator
+# 🚀 AI-Powered Business Report Generator
 
-An end-to-end business analytics dashboard that turns CSV sales data into KPIs, trend analysis, structured insights, and AI-generated executive reports using Python, Streamlit, Pandas, and a local Ollama model.
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red?logo=streamlit)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas)
+![NumPy](https://img.shields.io/badge/NumPy-Scientific%20Computing-013243?logo=numpy)
+![Ollama](https://img.shields.io/badge/Ollama-Local%20LLM-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
-## Project Overview
+---
 
-This project simulates a practical business reporting workflow. A user can upload a CSV file, map the dataset columns, filter the data, view business KPIs and charts, generate structured insights, and create an executive-style AI report.
+## 🎥 Demo Video
 
-The project is designed for business analyst, data analyst, and AI application portfolio use cases. It shows how traditional data analysis can be combined with local LLM-based report generation.
+👉 **Watch the complete project here**
 
-## What This Project Does
+**https://youtu.be/oCX3OemNhi4**
 
-- Loads CSV sales or business data
-- Cleans and prepares the dataset
-- Automatically suggests column mappings for different CSV formats
-- Lets the user manually map columns when needed
-- Calculates business KPIs
-- Analyzes revenue by category and region
-- Generates weekly and monthly revenue trends
-- Creates structured business insights
-- Sends the insights to a local Ollama LLM
-- Generates executive-style business reports
-- Supports multiple report styles
-- Provides a fallback template report if Ollama is unavailable
-- Displays results in an interactive Streamlit dashboard
-- Allows report and filtered data downloads
+---
 
-## Key Features
+## 📂 GitHub Repository
 
-### General CSV Support
+**https://github.com/anmol-janmejay/AI-Powered-Business-Report-Generator**
 
-The app is no longer limited to one fixed dataset format. It can work with different CSV files by mapping available columns to the fields needed for analysis.
+---
 
-The app tries to automatically identify:
+# Overview
 
-- Date column
-- Revenue or sales column
-- Profit column
-- Region/location column
-- Category/product column
+AI-Powered Business Report Generator is an end-to-end business analytics platform that transforms raw sales datasets into executive-ready business reports using traditional data analytics and Generative AI.
 
-For example, one dataset may use:
+The application automatically cleans uploaded datasets, computes business KPIs, performs trend analysis, extracts structured business insights, and generates professional executive summaries using a locally hosted Llama 3.2 language model via Ollama.
 
-```text
-Order Date, Sales, Profit, Region, Category
-```
+Designed for Data Analysts, Business Analysts, Business Intelligence professionals, and AI Engineers, the project demonstrates how AI can automate repetitive reporting workflows while supporting business decision-making.
 
-Another dataset may use:
+---
 
-```text
-Order Date, Sales, City, Product
-```
+## Dashboard Preview
 
-The sidebar allows the user to confirm or change the mapping before analysis.
+## Executive KPI Dashboard
 
-### Dashboard Filters
+![Dashboard](Executive_KPI.png)
 
-The dashboard supports:
+---
 
-- Date range filtering
-- Region/location filtering
-- Category/product filtering
-- Uploaded CSV files
-- Default local dataset
+## AI Executive Report
 
-### KPI Analysis
+![AI Report](AI_Executive_Report.png)
 
-The app calculates:
+---
 
-- Total revenue
-- Total profit
-- Total orders
-- Average order value
-- Weekly revenue trend
-- Monthly revenue trend
-- Weekly and monthly growth/decline rates
+# Key Highlights
 
-### Visual Analysis
+- End-to-end AI-powered business analytics workflow
+- Interactive Streamlit dashboard
+- Dynamic CSV column mapping
+- Automatic KPI generation
+- Weekly and monthly trend analysis
+- Business insight generation
+- AI-generated executive reports
+- Local LLM integration using Ollama
+- Downloadable reports
+- Fallback reporting when AI is unavailable
 
-The Streamlit dashboard includes:
+---
 
-- KPI cards
-- Revenue by category chart
-- Revenue by region chart
-- Weekly revenue trend chart
-- Monthly revenue trend chart
-- Detailed filtered data preview
-- Detailed analysis tables
+# Business Problem
 
-### AI Executive Report Generation
+Business teams often spend hours manually:
 
-The app converts structured insights into a professional report using a local Ollama model.
+- Cleaning raw sales data
+- Calculating KPIs
+- Creating dashboards
+- Identifying trends
+- Writing executive summaries
 
-Default model:
+This project automates the complete workflow by combining business analytics with Generative AI.
 
-```text
-llama3.2:1b
-```
+---
 
-The user can choose the report style:
+# Core Features
+
+## 📂 Data Upload
+
+Supports:
+
+- CSV datasets
+- Multiple dataset formats
+- Automatic column mapping
+- Manual mapping override
+
+---
+
+## 🧹 Data Cleaning
+
+Automatically performs:
+
+- Missing value handling
+- Data type conversion
+- Invalid record handling
+- Dataset validation
+- Standardization
+
+---
+
+## 📈 KPI Generation
+
+Automatically calculates:
+
+- Total Revenue
+- Total Profit
+- Total Orders
+- Average Order Value
+
+---
+
+## 📊 Business Analysis
+
+Generates:
+
+- Revenue by Category
+- Revenue by Region
+- Weekly Revenue Trends
+- Monthly Revenue Trends
+- Growth & Decline Percentage
+
+---
+
+## 🤖 AI Executive Report
+
+Uses:
+
+- Ollama
+- Llama 3.2:1b
+
+to generate:
 
 - Executive Summary
-- Sales Manager Report
-- Risk Analysis Report
-- Action Plan Report
+- Sales Report
+- Risk Analysis
+- Action Plan
 
-### Fallback Report Mode
+---
 
-If Ollama is not running or the model is unavailable, the app can still generate a template-based report using the structured insights. This makes the project easier to demo and more reliable.
+## 📥 Downloads
 
-### Automatic Output Folder Creation
+Users can download:
 
-The app automatically creates the `outputs` folder before saving the generated report. This prevents file save errors when running the project for the first time.
+- Filtered Dataset
+- AI Business Report
 
-## Tech Stack
+---
 
-- Python
-- Pandas
-- NumPy
+# Dashboard Filters
+
+Supports filtering by:
+
+- Date Range
+- Region
+- Product Category
+- Uploaded Dataset
+
+---
+
+# System Architecture
+
+```text
+             CSV Dataset
+                  │
+                  ▼
+          Data Loading Module
+                  │
+                  ▼
+          Data Cleaning Module
+                  │
+                  ▼
+         Dynamic Column Mapping
+                  │
+                  ▼
+          KPI Calculations
+                  │
+                  ▼
+        Trend Analysis Engine
+                  │
+                  ▼
+     Structured Business Insights
+                  │
+                  ▼
+      Ollama (Llama 3.2 Local LLM)
+                  │
+                  ▼
+      Executive Business Report
+                  │
+        ┌─────────┴─────────┐
+        ▼                   ▼
+ Streamlit Dashboard   Download Report
+```
+
+---
+
+# Project Workflow
+
+```text
+Upload CSV
+      │
+      ▼
+Validate Dataset
+      │
+      ▼
+Clean Data
+      │
+      ▼
+Map Dataset Columns
+      │
+      ▼
+Generate KPIs
+      │
+      ▼
+Business Trend Analysis
+      │
+      ▼
+Structured Insights
+      │
+      ▼
+AI Report Generation
+      │
+      ▼
+Interactive Dashboard
+      │
+      ▼
+Download Report
+```
+
+---
+
+# Technology Stack
+
+| Category | Technologies |
+|-----------|--------------|
+| Programming Language | Python |
+| Dashboard | Streamlit |
+| Data Processing | Pandas, NumPy |
+| Visualization | Plotly |
+| AI Integration | Ollama |
+| Language Model | Llama 3.2 |
+| API | Requests |
+| Version Control | Git, GitHub |
+
+---
+
+# Skills Demonstrated
+
+## Data Analytics
+
+- Data Cleaning
+- Data Wrangling
+- KPI Generation
+- Exploratory Data Analysis
+- Business Analytics
+- Time-Series Analysis
+
+## Artificial Intelligence
+
+- LLM Integration
+- Prompt Engineering
+- Business Report Generation
+- AI Workflow Automation
+
+## Dashboard Development
+
 - Streamlit
-- Requests
-- Ollama
-- Local LLM: `llama3.2:1b`
+- Interactive Filtering
+- KPI Cards
+- Data Visualization
 
-## Project Structure
+## Software Engineering
 
-```text
-ai-business-report-generator-main/
-|-- app/
-|   |-- streamlit_app.py
-|
-|-- data/
-|   |-- superstore_sales.csv
-|
-|-- outputs/
-|   |-- business_report.txt
-|
-|-- src/
-|   |-- analysis.py
-|   |-- data_cleaning.py
-|   |-- data_loader.py
-|   |-- insight_engine.py
-|   |-- llm_report.py
-|
-|-- main.py
-|-- README.md
-|-- requirements.txt
+- Modular Python Architecture
+- Error Handling
+- Dynamic Dataset Mapping
+- File Export
+- Clean Project Structure
+
+---
+
+# Example KPIs
+
+- Total Revenue
+- Total Profit
+- Total Orders
+- Average Order Value
+- Weekly Growth
+- Monthly Growth
+
+---
+
+# Example Business Insights
+
+- Best Performing Region
+- Best Performing Category
+- Lowest Performing Category
+- Monthly Revenue Trend
+- Weekly Sales Trend
+
+---
+
+# Why Ollama?
+
+This project uses a local LLM instead of cloud APIs because:
+
+- No API key required
+- No subscription cost
+- Data remains local
+- Faster demonstrations
+- Better portfolio project
+
+---
+
+# Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/anmol-janmejay/YOUR_GITHUB_REPO_LINK.git
 ```
 
-## How The Pipeline Works
+Move inside the project
 
-```text
-CSV Data
-  -> Data Loading
-  -> Data Cleaning
-  -> Column Mapping
-  -> KPI Calculation
-  -> Category and Region Analysis
-  -> Weekly and Monthly Trend Analysis
-  -> Structured Business Insights
-  -> AI or Fallback Report Generation
-  -> Streamlit Dashboard
-  -> Downloadable Report
+```bash
+cd YOUR_PROJECT_FOLDER
 ```
 
-## Column Mapping Logic
+Create a virtual environment
 
-The app uses both column names and data patterns to guess the correct fields.
-
-Examples:
-
-- Columns containing `date`, `order_date`, or `invoice_date` are treated as date candidates.
-- Columns containing `sales`, `revenue`, `amount`, or `price` are treated as sales candidates.
-- Columns containing `profit`, `margin`, or `income` are treated as profit candidates.
-- Columns containing `region`, `state`, `country`, `city`, or `market` are treated as region/location candidates.
-- Columns containing `category`, `product`, `segment`, or `department` are treated as category/product candidates.
-
-The app also checks whether values look like dates, numbers, or repeated text groups.
-
-## Example Dataset Mapping
-
-For the default `superstore_sales.csv` dataset:
-
-```text
-Date column: Order Date
-Revenue or sales column: Sales
-Profit column: Profit
-Region column: Region
-Category column: Category
-```
-
-For a general sales dataset like `Sales Data.csv`:
-
-```text
-Date column: Order Date
-Revenue or sales column: Sales
-Profit column: Not available
-Region column: City
-Category column: Product
-```
-
-If profit is not available, the app fills profit as `0` so the rest of the analysis can still run.
-
-## Why Ollama Is Used
-
-This project uses Ollama instead of a paid cloud API because:
-
-- No API key is required
-- No subscription is required
-- The model runs locally
-- It is easier to demo as a portfolio project
-- Business data does not need to be sent to an external API
-- It demonstrates local LLM integration
-
-## Requirements
-
-Install Python 3.10 or newer.
-
-Install project dependencies:
-
-```powershell
-pip install -r requirements.txt
-```
-
-Install Ollama from:
-
-```text
-https://ollama.com
-```
-
-Pull the local model:
-
-```powershell
-ollama pull llama3.2:1b
-```
-
-Check installed models:
-
-```powershell
-ollama list
-```
-
-## How To Run The Project
-
-Open PowerShell in the project folder:
-
-```powershell
-cd "C:\Users\monst\OneDrive\Desktop\Proj\Report Generator\ai-business-report-generator-main"
-```
-
-Create a virtual environment:
-
-```powershell
+```bash
 python -m venv .venv
 ```
 
-Activate the virtual environment:
+Activate it
 
-```powershell
+Windows
+
+```bash
 .venv\Scripts\activate
 ```
 
-Install dependencies:
+Install dependencies
 
-```powershell
+```bash
 pip install -r requirements.txt
 ```
 
-Run the Streamlit app:
+Install Ollama
 
-```powershell
-streamlit run app\streamlit_app.py
-```
+https://ollama.com
 
-Open the local Streamlit URL shown in the terminal, usually:
+Download the model
 
-```text
-http://localhost:8501
-```
-
-## How To Generate An AI Report
-
-1. Start the Streamlit app.
-2. Upload a CSV file or use the default dataset.
-3. Check the column mapping in the sidebar.
-4. Adjust mappings if needed.
-5. Apply filters if needed.
-6. Select a report style.
-7. Click `Generate AI Report`.
-8. Download the generated report.
-
-## If Ollama Is Not Working
-
-Check whether Ollama is running:
-
-```powershell
-ollama list
-```
-
-If the model is missing:
-
-```powershell
+```bash
 ollama pull llama3.2:1b
 ```
 
-If Ollama still fails, the app will create a fallback template-based report instead.
+Run the application
 
-## Skills Demonstrated
+```bash
+streamlit run app.py
+```
 
-- Python programming
-- Data loading and cleaning
-- CSV handling
-- Data analysis with Pandas
-- KPI calculation
-- Time-series trend analysis
-- Business insight generation
-- Streamlit dashboard development
-- Dynamic column mapping
-- Local LLM integration with Ollama
-- Prompt engineering
-- Error handling and fallback logic
-- Downloadable report generation
-- Portfolio-ready analytics application design
+---
 
+# Future Improvements
 
-## Future Improvements
+- PDF Report Export
+- SQL Database Support
+- Excel File Support
+- Forecasting Models
+- AI Recommendations
+- User Authentication
+- Scheduled Reports
+- Power BI Export
+- Cloud Deployment
+- Multi-user Support
 
-- Add PDF report export
-- Add automatic chart recommendations
-- Add comparison mode for current vs previous period
-- Add more advanced anomaly detection
-- Add support for Excel files
-- Add authentication for business users
-- Add dashboard theme customization
+---
+
+# Resume Description
+
+Developed an end-to-end AI-powered business analytics platform that transforms raw sales datasets into executive-ready reports through automated KPI generation, trend analysis, interactive dashboards, and LLM-based business insight generation using Python, Streamlit, Pandas, and Ollama.
+
+---
+
+# Author
+
+## Anmol Janmejay
+
+**Aspiring Data Analyst | Business Intelligence | AI & Data Analytics**
+
+📧 anmol.janmejay@gmail.com
+
+💼 LinkedIn
+
+https://www.linkedin.com/in/anmol-janmejayyy/
+
+🐙 GitHub
+
+https://github.com/anmol-janmejay
+
+---
+
+# ⭐ If you found this project useful, consider giving it a star!
